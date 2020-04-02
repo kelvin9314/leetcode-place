@@ -1,14 +1,36 @@
-const INPUT = 19
-
 /**
  * @param {number} num
  * @return {boolean}
  */
-
-
-
-
  
+var isHappyV2 = function(n) {
+  n = [...(n + '')];
+  let records = []
+  let currentNumber = null
+  let isFound = false
+  
+  while(!isFound){
+    let count = 0;
+
+    for(let j = 0; j < n.length; j++) {
+      count += n[j] ** 2;
+    }
+    if (count === 1) return true;
+    
+    if(!records) {
+      records = [count]
+    } else {
+      if(records.includes(count)) return false
+
+      records = [...records, count]
+    }
+    n = [...(count + '')];
+  }
+};
+
+const happyNumber = isHappyV2(2)
+console.log(happyNumber)
+
 // var isHappy = function(n) {
 //   if(n < 0 ) return
 
@@ -50,31 +72,3 @@ const INPUT = 19
 //     }  
 //   }
 // };
-
-var isHappyV2 = function(n) {
-  n = [...(n + '')];
-  let records = []
-  let currentNumber = null
-  let isFound = false
-  
-  while(!isFound){
-    let count = 0;
-
-    for(let j = 0; j < n.length; j++) {
-      count += n[j] ** 2;
-    }
-    if (count === 1) return true;
-    
-    if(!records) {
-      records = [count]
-    } else {
-      if(records.includes(count)) return false
-
-      records = [...records, count]
-    }
-    n = [...(count + '')];
-  }
-};
-
-const happyNumber = isHappyV2(2)
-console.log(happyNumber)
