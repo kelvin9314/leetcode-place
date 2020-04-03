@@ -1,4 +1,4 @@
-# Maximum Subarray
+# [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 ## question
 
@@ -21,4 +21,5 @@ If you have figured out the O(n) solution, try coding another solution using the
 ## think to solve
 
 - Dynamic Programming ??
-- 暴力法: N+(N-1)+(N-2)+…+1，每個子陣列中的計算下一組和(如[-2] -> [-2,1])，都只需一個加法，故時間複雜度會是O(N²)
+- brute force solution: N+(N-1)+(N-2)+…+1，每個子陣列中的計算下一組和(如[-2] -> [-2,1])，都只需一個加法，故時間複雜度會是O(N²)
+- Divide and Conquer: 

@@ -1,5 +1,6 @@
 const INPUT = [-2,1,-3,4,-1,2,1,-5,4]
-// 暴力法 O(n3)
+// brute force solution, O(n3)
+// Runtime: 52 ms
 var maxSubArrayV1 = function(nums) {
   let current=nums[0]
   let result=nums[0]
@@ -16,10 +17,27 @@ var maxSubArrayV1 = function(nums) {
   }
   return result
 };
-// 改良式暴力法：O(n2)
+
+var maxSubArrayV2 = function(nums) {
+  let max = -Infinity;
+  let currentMax = 0;
+  
+  for(let i = 0; i < nums.length; i++) {
+      currentMax = Math.max(nums[i], currentMax + nums[i]);
+      max = Math.max(currentMax, max);               
+  }
+  
+  return max;
+};
+
+// Dynamic Programming
+var maxSubArrayV3 = function(nums) {
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
+  }
+  return Math.max(...nums)
+};
 
 // Divide and Conquer：O(nlog n)
 
-// Kadane's演算法：O(n)
-
-console.log(maxSubArrayV1(INPUT))
+console.log(maxSubArrayV3(INPUT))
