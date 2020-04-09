@@ -1,6 +1,8 @@
 # [ Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
 
-Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
+## question
+
+Given two strings `S` and `T`, return if they are equal when both are typed into empty text editors. # means a backspace character.
 
 **Example 1:**
 ```
@@ -37,3 +39,8 @@ Note:
 
 Follow up:
 - Can you solve it in O(N) time and O(1) space?
+
+## think
+- 簡單的 for loop 加 stack 去處理
+- str !== '#' **PUSH**
+- str === '#' **POP**

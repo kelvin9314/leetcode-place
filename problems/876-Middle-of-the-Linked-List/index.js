@@ -10,6 +10,7 @@
  * @return {ListNode}
  */
 
+// runtime: 52ms
 const middleNode = head => {
   const middleNode = head => {
     let counter=0;
