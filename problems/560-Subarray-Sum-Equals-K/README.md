@@ -1,4 +1,4 @@
-# [Leftmost Column with at Least a One](https://leetcode.com/problems/subarray-sum-equals-k/)
+# [subarray-sum-equals-k](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 ## question
 
