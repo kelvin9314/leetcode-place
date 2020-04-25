@@ -17,7 +17,7 @@ Output: 0
 ```
 
 ## think
-1. 把 M 和 N 轉成 binary 後
+1. 把 M 和 N 都轉成 binary 後
 2. 一直向右 shift （K 次），去掉右邊的 bit ，直剩下的 M 和 N 是等於的
 3. IF 有 M == N, 再住左 shift K 次 去補 0，就可以等到答案
 4. ELSE  return 0

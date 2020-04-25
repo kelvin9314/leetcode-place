@@ -3,7 +3,7 @@
  * @param {number} n
  * @return {number}
  */
-
+// runtime: 152 ms
 const rangeBitwiseAnd = (m, n) => {
   let shiftTimes = 0
 
